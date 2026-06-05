@@ -55,9 +55,6 @@ pub struct ConnectionsWithSpeed {
 }
 
 #[cfg(feature = "deserialize")]
-pub use deserialize::*;
-
-#[cfg(feature = "deserialize")]
 mod deserialize {
     use chrono::Utc;
 

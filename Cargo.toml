@@ -1,7 +1,6 @@
-cargo-features = ["strip"]
-
 [workspace]
 members = ["clashctl*"]
+resolver = "2"
 
 [profile.release]
 lto           = true
@@ -9,6 +8,3 @@ strip         = true
 panic         = "abort"
 opt-level     = "z"
 codegen-units = 1
-
-[net]
-git-fetch-with-cli = true

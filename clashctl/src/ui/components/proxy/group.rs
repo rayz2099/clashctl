@@ -36,7 +36,7 @@ impl<'a> ProxyGroup<'a> {
         &self.members
     }
 
-    pub fn get_summary_widget(&self) -> impl Iterator<Item = Span> {
+    pub fn get_summary_widget(&self) -> impl Iterator<Item = Span<'_>> {
         self.members.iter().map(|x| {
             if x.proxy_type.is_normal() {
                 match x.history {

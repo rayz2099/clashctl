@@ -57,7 +57,7 @@ impl<'a> ProxyTree<'a> {
     }
 
     #[inline]
-    pub fn current_group(&self) -> &ProxyGroup {
+    pub fn current_group(&self) -> &ProxyGroup<'_> {
         &self.groups[self.cursor]
     }
 

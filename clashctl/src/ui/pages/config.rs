@@ -25,7 +25,7 @@ enum ConfigListItem<'a> {
 }
 
 impl<'a> ConfigListItem<'a> {
-    pub fn title(title: &'a str) -> impl Iterator<Item = ConfigListItem> {
+    pub fn title(title: &'a str) -> impl Iterator<Item = ConfigListItem<'a>> {
         [
             ConfigListItem::Empty,
             ConfigListItem::Title(title),
